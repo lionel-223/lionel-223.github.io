@@ -50,7 +50,7 @@
       <img src="/static/photo .png" alt="Profile">  
     </div>  
     <div class="right flex-1">  
-      <h6>EMRICH MONTHE</h6>  
+      <h6>L<strong>.</strong> DJANGUE</h6>  
       <h1>Je suis un<br> <span>Developpeur web</span></h1>  
       <p>Bonjour à tous ! Je me présente Emrich monthe, 
         j’ai 22 ans. Je suis actuellement étudiant en deuxième année de 
@@ -59,15 +59,7 @@
         <button class="btn btn-secondary"><a href="cv.html">DOWNLOAD CV</button></a> 
       </div>  
     </div>  
-  </div> 
-
-  {% block content %}
-  <h1>Portfolio</h1>
-  <ul>
-      <li>{{ article.Libelle_MA }} - {{ article.Description }}</li>
-  </ul>
-  {% endblock %}
-
+  </div>
   <section class="about">  
     <div class="container flex items-centre">  
       <div class="left flex-1 justify-right">  
@@ -86,6 +78,12 @@
         </div>  
       </div>  
     </div>  
+    <h1>Portfolio</h1>
+    <ul>
+      {% for article in articles %}
+        <li>{{ article.Libelle_MA }} - {{ article.Description }}</li>
+      {% endfor %}
+    </ul>
   </section> 
   <section class="services">  
     <div class="container">  

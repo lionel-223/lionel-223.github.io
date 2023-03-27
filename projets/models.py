@@ -1,6 +1,6 @@
 from django.db import models
 
-class Articles_DePresse(models.Model):
+class ArticlesDePresse(models.Model):
     Id_Articles = models.AutoField(primary_key=True)
     Libelle_AP = models.CharField(max_length=50)
     Description = models.CharField(max_length=50)
@@ -14,7 +14,7 @@ class Mailing(models.Model):
     Date_Envoi = models.DateField()
     Destinataires = models.CharField(max_length=50)
 
-class Mes_Articles(models.Model):
+class MesArticles(models.Model):
     Id_Mes_Articles = models.AutoField(primary_key=True)
     Libelle_MA = models.CharField(max_length=50)
     Description = models.CharField(max_length=50)

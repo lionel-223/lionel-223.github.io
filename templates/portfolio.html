@@ -1,0 +1,114 @@
+ {% load static %}
+ <!DOCTYPE html>  
+ <html lang="en">  
+ <head>  
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+   <link rel="stylesheet" href="{% static 'styles.css'%}">  
+   <link rel="preconnect" href="https://fonts.googleapis.com">  
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Poppins:wght@200&display=swap"  
+     rel="stylesheet">  
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">  
+   <title>Portfolio</title>   
+ </head>  
+ <body>  
+  <header>  
+    <div class="container">  
+      <nav class="flex items-centre justify-between">  
+          <div class="left flex justfiy-right">  
+          <div class="logo">  
+            <img src="/static/logo_large.png" width="150px" alt="logo">  
+          </div>  
+          <div>  
+            <a href="index.html">Home</a>  
+            <a href="about.html">About</a>  
+            <a href="services.html">Services</a>  
+            <a href="blogs.html">Blog</a></li>  
+            <a href="portfolio.html">portfolio</a>  
+            <select id="menu" name="menu" class="btn btn-primary petit">
+              <option value="#">Mon compte</option>
+              <optgroup label="Paramètres">
+                <option value="#">Changer mon mot de passe</option>
+                <option value="#">Changer mon adresse e-mail</option>
+              </optgroup>
+              <optgroup label="Profil">
+                <option value="#">Changer ma photo de profil</option>
+                <option value="#">Supprimer mon compte</option>
+              </optgroup>
+            </select>
+          </div> 
+        </div> 
+        <div class="droite">
+          <button class="btn btn-primary">Contact</button> 
+        </div>  
+      </nav>
+    </div> 
+  </header>  
+  <div class="hero flex items-centre justify-between">  
+    <div class="left img flex-1 justify-center">  
+      <img src="/static/photo .png" alt="Profile">  
+    </div>  
+    <div class="right flex-1">  
+      <h6>EMRICH MONTHE</h6>  
+      <h1>Je suis un<br> <span>Developpeur web</span></h1>  
+      <p>Bonjour à tous ! Je me présente Emrich monthe, 
+        j’ai 22 ans. Je suis actuellement étudiant en deuxième année de 
+        BTS SIO(Service Informatique aux organisations), option SISR au Lycée Gaston Berger</p>  
+      <div>  
+        <button class="btn btn-secondary"><a href="cv.html">DOWNLOAD CV</button></a> 
+      </div>  
+    </div>  
+  </div> 
+
+  {% block content %}
+  <h1>Portfolio</h1>
+  <ul>
+      <li>{{ article.Libelle_MA }} - {{ article.Description }}</li>
+  </ul>
+  {% endblock %}
+
+  <section class="about">  
+    <div class="container flex items-centre">  
+      <div class="left flex-1 justify-right">  
+        <img src="/static/images/man2.png" height="400px" alt="profile pic">  
+      </div>  
+      <div class="right flex-1">  
+        <h1>About <span>Moi</span></h1>  
+        <h3>Hello! c'est Lionel.</h3>  
+        <p>retrouvez moi sur mes réseaux sociaux ci dessous, et n'hésitez pas à vous aboner :) 
+        </p>  
+        <div class="socials">  
+          <a href="#"><img src="/static/facebook.jpg" width="40px"></a>  
+          <a href="#"><img src="/static/instagram.jpg" width="40px"></a>  
+          <a href="#"><img src="/static/twitter.jpg" width="40px" height="40"></a>  
+          <a href="#"><img src="/static/snapchat.jpg" width="40px"></a>  
+        </div>  
+      </div>  
+    </div>  
+  </section> 
+  <section class="services">  
+    <div class="container">  
+      <h1 class="services-head">Services</h1>  
+      <p>Tout vos besoins numeriques... couvert.</p>  
+      <div class="card-grid">  
+        <div class="card">  
+          <img src="/static/graphic design1.png">  
+          <h2>Desgin Graphique</h2>  
+          <p>Voyez vos imagination se concrétiser</p>  
+        </div>  
+        <div class="card">  
+          <img src="/static/web developpement.png">  
+          <h2>Developpement web</h2>  
+          <p>Solutions divergeantes pour des besoins de métiers spécifiques</p>  
+        </div>  
+        <div class="card">  
+          <img src="/static/content writing1.png">  
+          <h2>Rédaction de contenu</h2>  
+          <p>Production de contenu efficace ciblé en fonction des besoins de vos internaurtes</p>  
+        </div>   
+      </div>  
+    </div>  
+  </section>    
+ </body>  
+ </html>

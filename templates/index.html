@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form class="box" action="resultat.html" method="post">
+    {% csrf_token %}
+    <h1 class="box-title">résolution d'une équationd de second dégré</h1>
+    <h2 class="box-title">veuillez entrer les paramètres : a, b et c de votre équation dans le formulaire ci-après</h2>
+    <label for="parametres">vos paramètres: </label><br>
+    Veuiller entrer la valeur de a <input type="number" class="box-input" name="a" required placeholder="valeur de a"><br>
+    Veuiller entrer la valeur de b <input type="number" class="box-input" name="b" required placeholder="valeur de b"><br>
+    Veuiller entrer la valeur de c <input type="number" class="box-input" name="c" required placeholder="valeur de c"><br>
+    <input type="submit" value="résoudre" name="submit" class="box-button">
+</form>
+{% endblock %}
